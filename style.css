@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+    --purple: #BC8CF2;
+    --black: #000000;
+    --white: #F7F5F2;
+    --grey: #DFDFDE;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    transition: all 0.2s linear;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: #000;
+}
+
+section{
+    padding: 2rem 5%;
+}
+
+
+
+
+.heading{
+    margin-bottom: 2rem;
+}
+
+.heading h2{
+    text-align: center;
+    padding-bottom: 2rem;
+    color:var(--purple);
+    font-size: 4rem;
+}
+
+.heading h2 span{
+    position: relative;
+    z-index: 0;
+    color: var(--white);
+}
+
+.heading h2 span::before{
+    content: '';
+    position: absolute;
+    bottom: -0.5rem; left: 0;
+    z-index: -1;
+    background: var(--purple);
+    height: 0.2rem;
+    width: 80%;
+    margin-left: 10%;
+}
+
+/*--------------------- 1- Heading CSS (End) ---------------------*/
+
+
+
+/*--------------------- 2- Button CSS (Start) ---------------------*/
+.btn{
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    color: var(--purple);
+    background-color: transparent;
+    border: 0.2rem solid var(--purple);
+}
+
+.btn i{
+    padding-left: 1rem;
+}
+
+.btn:hover{
+    color: var(--white);
+    background-color: var(--purple);
+    cursor: pointer;
+}
+
+/*--------------------- 2- Button CSS (End) ---------------------*/
+
+
+
+/*--------------------- 3- Header Area CSS (Start) ---------------------*/
+header{
+    width: 100%;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+
+
+header .logo h2{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--purple);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}
+
+header .navbar a{
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-left: 1rem;
+}
+
+header .navbar a:hover,
+header .navbar a.active{
+    color: var(--purple);
+}
+
+header #menu-btn{
+    font-size: 3rem;
+    color: var(--white);
+    cursor: pointer;
+    display: none;
+}
+
+
+
+header #menu-btn:hover{
+    color: var(--purple);
+}
+
+/*--------------------- 3- Header Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 4- Home Area CSS (Start) ---------------------*/
+.home{
+    padding: 0rem 5%;
+    background-color: var(--black);
+}
+
+.home .box-container{
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.home .image{
+    text-align: center;
+    flex: 1 1 40rem;
+
+}
+
+.home .image img{
+    height: 40rem;
+    width: 40rem;
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70% ;
+    object-fit:cover;
+}
+
+.home .content{
+    flex: 1 1 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+
+.home .content h2{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--purple);
+}
+
+.home .content h1{
+    font-size: 4rem;
+    color: var(--white);
+    padding: 1rem 0;
+    text-transform: none;
+}
+
+.home .content h1 span{
+    color: var(--purple);
+
+}
+
+.home .content p{
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: var(--white);
+    padding-bottom: 2rem;
+    line-height: 1.5;
+}
+/*--------------------- 4- Home Area CSS (End) ---------------------*/
+
+
+
+
+.about .box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+    min-height: calc(100vh - 80px);
+}
+.about.zvo .box-container{
+    flex-wrap: nowrap;
+}
+
+
+.about .image{
+    width: 32rem;
+    text-align: center;
+}
+
+.about .image img{
+    width: 100%;
+    border: 1rem solid var(--purple);
+}
+.about.zvo .image{
+    width: 30vw;
+}
+.about .content{
+        flex: 1 1 40rem;
+}
+
+.about .content h2{
+    font-size: 3rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+}
+
+.about .content > p{
+    font-size: 1.6rem;
+    color: var(--grey);
+    line-height: 1.6;
+    padding-bottom: 1rem;
+}
+
+.about .content .about-info{
+    display: flex;
+    justify-content: flex-start;\
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.about .content .about-info .info{
+        flex: 1 1 15rem;
+}
+
+.about .content .about-info .info h4{
+    font-size: 1.6rem;
+    color: var(--white);
+    padding-bottom: 1rem;
+}
+
+.about .content .about-info .info span{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.about .content .about-info .info .btn{
+    margin-top: 1rem;
+}
+
+
+/*--------------------- 11- Contact Area CSS (Start) ---------------------*/
+.contact{
+   padding-top: 50px;
+}
+.contact .alert{
+    font-size: 2rem;
+    color: var(--purple);
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+}
+
+.contact .box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.contact-info{
+        flex: 1 1 42rem;
+}
+
+.contact-info h3{
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.contact-info > p{
+    font-size: 1.6rem;
+    color: var(--grey);
+    padding: 0.5rem 0;
+}
+
+.contact-info .info-item{
+    padding: 1rem 0;
+}
+
+.contact-info .info-item .gmail,
+.contact-info .info-item .linkedin,
+.contact-info .info-item .github{
+    text-transform: none;
+}
+
+.contact-info .info-item h4{
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.contact-info .info-item .detail{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info .info-item .detail .fas,
+.contact-info .info-item .detail .fab{
+    border-radius: 50%;
+    color: var(--purple);
+    display: flex;;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.contact-info .info-item .detail p{
+    font-size: 1.6rem;
+    color: var(--grey);
+    line-height: 1.6;
+    padding-left: 1rem;
+}
+
+.contact-form{
+        flex: 1 1 42rem;
+}
+
+.contact-form .box{
+    width: 100%;
+    text-transform: none;
+    color: var(--grey);
+    font-size: 1.6rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 0.5rem 0;
+    background-color: #222;
+}
+
+.contact-form .box:focus{
+    border-color: var(--white);
+}
+
+.contact-form .box::placeholder{
+    color: var(--grey);
+}
+
+.contact-form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+.contact-form .btn{
+    margin-top: 1rem;
+}
+
+/*--------------------- 11- Contact Area CSS (End) ---------------------*/
+
+footer{
+    background: #1b1b1b;
+    height: 80px;
+    color: #fff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*--------------------- Responsive (Start) ---------------------*/
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+        .about.zvo .box-container{
+        flex-direction: column;
+    }
+    .about.zvo .image{
+    width: 70vw;
+}
+}
+
+@media (max-width: 768px){
+    header #menu-btn{
+        display: block;
+      } 
+        .header {
+            overflow: hidden;
+        }
+      .header .navbar{
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        left: 0; 
+        padding: 0rem 2rem;
+        background: black;
+        transition: 0.2s linear;
+        overflow-y: auto;
+        background: #1b1b1b;
+        opacity: 0; 
+        visibility: hidden;
+    }
+  
+    .header .navbar.active{
+        opacity: 1;
+        visibility: visible;
+    }
+  
+    .header .navbar a{
+        display: block;
+        color: #fff;
+        padding: 1.5rem 0;
+        margin: 1rem 0;
+    }
+
+    section, header{
+        padding: 2rem;
+    }
+
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+
+    section, header{
+        padding: 1rem;
+    }
+
+
+
+}
+
+/*--------------------- Responsive (End) ---------------------*/
